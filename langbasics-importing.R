@@ -1,4 +1,16 @@
 ##### Base R vs readr importing -----
+# Week 2 practice tutorial for relative paths 
+# install.packages("here") if needed
+library(here)
+# the project root
+# absolute, differs per computer
+here()      
+# root + file name
+here("package_install.Rproj")     
+
+# TRUE from any folder in the project
+file.exists(here("package_install.Rproj"))
+
 # read.csv is part of base R, the default fx set
 ds <- read.csv('data_raw/vocab16.csv')
 print(ds)
@@ -68,3 +80,4 @@ ds <- read_csv(file = fname, col_names = colname)
 ds <- read_csv(file = fname, col_names = colname, skip = 1) 
 ds <- read_csv(file = fname, col_names = colname, col_types = coltypes, skip = 1) 
 
+# brooo this is sick!
